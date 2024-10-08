@@ -1,0 +1,36 @@
+.vega-bind {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-left: 350px;
+    top: 0;
+}
+
+.chart-wrapper{
+    margin-top: 20px;
+}
+
+.vis {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.filterText{
+    padding-right: 3px;
+}
+
+.custom-tooltip {
+    background-color: red; /* Tooltip background color */
+    border: 1px solid black; /* Border of the tooltip */
+    border-radius: 4px; /* Rounded corners */
+    padding: 5px; /* Padding around the text */
+    font-family: Arial, sans-serif; /* Font family */
+    font-size: 14px; /* Font size */
+    color: black; /* Text color */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Optional shadow for the tooltip */
+}

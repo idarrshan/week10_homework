@@ -1,0 +1,52 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Line chart showing trends of disease counts over the years",
+    "width": 700,
+    "height": 400,
+    "title": "Trends of Communicable Diseases Over Time",
+    "data": {
+      "url": "https://raw.githubusercontent.com/idarrshan/FIT3179_Homework-Week-10/refs/heads/main/week10_hw/disease_data.csv"
+    },
+    "params": [
+      {
+        "name": "yearFilter",
+        "value": 2000,
+        "bind": {
+          "input": "range",
+          "min": 2000,
+          "max": 2021,
+          "step": 1,
+          "name": "Year: "
+        }
+      }
+    ],
+    "transform": [
+      {
+        "filter": "datum.Year >= yearFilter"
+      }
+    ],
+    "mark": "line",
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "ordinal",
+        "title": "Year"
+      },
+      "y": {
+        "field": "Count",
+        "type": "quantitative",
+        "title": "Total Count"
+      },
+      "color": {
+        "field": "Diseases",
+        "type": "nominal",
+        "title": "Disease Type"
+      },
+      "tooltip": [
+        {"field": "Year", "type": "ordinal"},
+        {"field": "Diseases", "type": "nominal"},
+        {"field": "Count", "type": "quantitative"}
+      ]
+    }
+  }
+  
